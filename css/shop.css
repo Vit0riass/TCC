@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    margin: 0%;   
+}
+
+.container1{
+    display: flex;
+    flex-direction: row;
+}
+
+.cabeçalho {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 13px;
+    justify-content: space-around;
+    padding: 5px;
+    background: #f8da80;
+    position: relative;
+      z-index: 1;
+      overflow: hidden;
+    box-shadow: 0 8px 48px 8px rgba(0, 0, 0, 0.144);
+}
+
+
+.cabeçalho-imagem {
+    height: 110px;
+    width: 360px;
+    margin-right: 45%;
+
+}
+
+.cabeçalho-menu-item {
+    font-family: "Source Code Pro", monospace;
+    color: #2d3f4e;
+    font-weight: 600;
+    font-size: 16.5px;
+    letter-spacing: 3px;
+}
+
+.cabeçalho-menu {
+    display: flex;
+    gap: 50px;
+}
+
+.titulo1{
+    width: 60%;
+    padding: 15px;
+    margin-left: 20%;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+*
+{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+
+.product-card {
+    width: 380px;
+    position: relative;
+    box-shadow: 0 2px 7px #dfdfdf;
+    margin: 50px auto;
+    background: #fafafa;
+}
+
+.badge {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    background: #f8da80;
+    color: #fff;
+    padding: 3px 10px;
+}
+
+.product-tumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    padding: 50px;
+    background: #f0f0f0;
+}
+
+.product-tumb img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.product-details {
+    padding: 30px;
+}
+
+.product-catagory {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ccc;
+    margin-bottom: 18px;
+}
+
+.product-details h4 a {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    color: #363636;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.product-details h4 a:hover {
+    color: #fbb72c;
+}
+
+.product-details p {
+    font-size: 15px;
+    line-height: 22px;
+    margin-bottom: 18px;
+    color: #999;
+}
+
+.product-bottom-details {
+    overflow: hidden;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.product-bottom-details div {
+    float: left;
+    width: 50%;
+}
+
+.product-price {
+    font-size: 18px;
+    color: #fbb72c;
+    font-weight: 600;
+}
+
+.product-price small {
+    font-size: 80%;
+    font-weight: 400;
+    text-decoration: line-through;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.product-links {
+    text-align: right;
+}
+
+.product-links a {
+    display: inline-block;
+    margin-left: 5px;
+    color: #e1e1e1;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+.product-links a:hover {
+    color: #fbb72c;
+}
+
+:root {
+    --color-neutral-0: #778766;
+    --color-neutral-10:#f8da80 ;
+    --color-neutral-30: #272727;
+    --color-neutral-40: #556347;
+  }
+  
+  footer {
+    width: 100%;
+    color: var(--color-neutral-40);
+  }
+  
+  .footer-link {
+    text-decoration: none;
+  }
+  
+  .h3{
+  font-size: 20px;
+  }
+  
+  #footer_content {
+    background-color: var(--color-neutral-10);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 3rem 3.5rem;
+    position: relative;
+      z-index: 1;
+      overflow: hidden;
+    box-shadow: 0 8px 48px 8px rgba(0, 0, 0, 0.329);
+  }
+  
+  .titulo{
+    font-size: 25px;
+  }
+  
+  #footer_contacts h1 {
+    margin-bottom: 0.75rem;
+  }
+  
+  #footer_social_media {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+  } 
+  
+  #footer_social_media .footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    color: #ffffff;
+    border-radius: 50%;
+    transition: all 0.4s;
+  }
+  
+  #footer_social_media .footer-link i {
+    font-size: 1.25rem;    
+  }
+  
+  #footer_social_media .footer-link:hover {
+    opacity: 0.8;
+  }
+  
+  #instagram {
+    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+  }
+  
+  #facebook {
+    background-color: #4267b3;
+  }
+  
+  #whatsapp {
+    background-color: #25d366;
+  }
+  
+  .footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+  }
+  
+  .footer-list .footer-link {
+    color: var(--color-neutral-30);
+    transition: all 0.4s;
+  }
+  
+  .footer-list .footer-link:hover {
+    color: #ffffff;
+  }
+  
+  #footer_subscribe {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  #footer_subscribe p {
+    color: var(--color-neutral-30);
+  }
+  
+  #input_group {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-neutral-0);
+    border-radius: 4px;
+  }
+  
+  #input_group input {
+    all: unset;
+    padding: 0.75rem;
+    width: 100%;
+  }
+  
+  .g-i-t form {
+  display: flex;
+      flex-direction: column;
+      margin-top: 1rem;
+      --tw-space-y-reverse: 0;
+      margin-top: calc(0.5rem* calc(1 - var(--tw-space-y-reverse)));
+      margin-bottom: calc(0.5rem* var(--tw-space-y-reverse));
+  }
+  
+  form .g-inp {
+    padding: .25rem .5rem;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .space-y-2 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0.5rem* calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0.5rem* var(--tw-space-y-reverse));
+    border: none;
+  }
+  
+  .f-btn {
+    padding: .25rem 1rem;
+    background-color: var(--color-neutral-0);
+    border-radius: .25rem;
+    font-size: 16px;
+    color: white;
+    font-weight: 400;
+  }
+  
+  
+  #input_group button:hover {
+    opacity: 0.8;
+  }
+  
+  #footer_copyright {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-neutral-0);
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    font-weight: 100;
+  }
+  
+  @media screen and (max-width: 768px) {
+    #footer_content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+  }
+  
+  @media screen and (max-width: 426px) {
+    #footer_content {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 3rem 2rem;
+    }
+  }
+  
+  .Copyright{
+    color: #ffffff;
+    font-size: 20px;
+  }
