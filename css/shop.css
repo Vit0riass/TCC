@@ -178,6 +178,132 @@ a
     color: #fbb72c;
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #ffffffea;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  height: 85%;
+  max-width: 700px; /* Tamanho máximo maior */
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.modal img {
+  display: block;
+  margin: 0 auto 20px auto; /* Centraliza a imagem */
+  border-radius: 8px;
+}
+
+.close-btn, .cancel-btn, .finalize-btn {
+  cursor: pointer;
+  padding: 10px 20px;
+  margin: 10px;
+}
+
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-btn:hover {
+  color: black;
+}
+
+.quantity-input {
+  width: 60px;
+  margin: 10px;
+  text-align: center;
+}
+
+.cancel-btn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+}
+
+.finalize-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+}
+
+.text{
+  color: #556347;
+  font-size: 20px;
+  font-family: "Source Code Pro", monospace;
+  font-weight: 600;
+  display: flex;
+  /* text-align: center; */
+  padding: 15px;
+  flex-direction: column;
+}
+
+.text2{
+  font-size: 16.5px;
+    line-height: 22px;
+    margin-bottom: 18px;
+    color: #556347;
+}
+
+.text2:hover{
+  color: #f8cc47 ;
+}
+
+.modal-footer{
+  gap: 85px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row-reverse;
+}
+
+label{
+  gap: 85px;
+  font-size: 15px;
+  line-height: 22px;
+  margin-bottom: 18px;
+  color: #556347;
+    justify-content: space-evenly;
+    flex-direction: row-reverse;
+}
+
+.content-label{
+  padding: 25px;
+}
+
+p{
+  font-size: 20px;
+    line-height: 22px;
+    margin-bottom: 18px;
+    color: #556347;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.container-descricao{
+  gap: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
 :root {
     --color-neutral-0: #778766;
     --color-neutral-10:#f8da80 ;

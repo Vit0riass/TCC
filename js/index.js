@@ -1,5 +1,5 @@
 function mouseOverImg1() {
-    document.getElementById("teste1").src = "VITORIATCC/img/text1.png";
+    document.getElementById("teste1").src ="/img/text1.png";
 }
 
 function mouseOutImg1() {
@@ -15,7 +15,7 @@ function mouseOutImg2() {
 }
 
 function mouseOverImg3() {
-    document.getElementById("teste3").src = "img/text3.png";
+    document.getElementById("teste3").src = "/img/text3.png";
 }
 
 function mouseOutImg3() {

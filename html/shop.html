@@ -10,13 +10,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 
-<body>
+<body >
 
     <header class="cabeçalho">
 
         <img class="cabeçalho-imagem" src="/img/logo1.png" alt="Adopet">
         <nav class="cabeçalho-menu">
-            <a href="inicio.html" class="cabeçalho-menu-item">INÍCIO</a>
+            <a href="index.html" class="cabeçalho-menu-item">INÍCIO</a>
             <a href="adote.html" class="cabeçalho-menu-item">ADOTE</a>
             <a href="cadastro.html" class="cabeçalho-menu-item">CADASTRO</a>
             <a href="sobrenos.html" class="cabeçalho-menu-item">SOBRE NÓS</a>
@@ -36,302 +36,929 @@
             </div>
             <div class="product-details">
                 <span class="product-catagory">RAÇÃO</span>
-                <h4><a href="">RAÇÃO| GATO ADULTO</a></h4>
+                <h4><a href="#">RAÇÃO | GATO ADULTO</a></h4>
                 <p>Ração Whiskas para Gatos Adultos Sabor Peixe 1kg</p>
                 <div class="product-bottom-details">
                     <div class="product-price">R$25.99</div>
                     <div class="product-links">
-                        <a href=""><i class="fa fa-heart"></i></a>
-                        <a href=""><i class="fa fa-shopping-cart"></i></a>
+                        <a href="#" onclick="openCartModal('/img/racao.png', 'Ração Whiskas para Gatos Adultos Sabor Peixe 1kg', 25.99)">
+                            <i class="fa fa-shopping-cart"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
+    
+        <!-- Modal -->
+        <div id="cartModal" class="modal">
+            <div class="modal-content">
+                <h2 class="text">ADICIONAR AO CARRINHO</h2>
+                <img id="modalImage" src="" alt="Product Image">
+                
+                <div class="container-descricao">
+                <p id="modalDescription"></p>
+                <p>Preço: R$<span id="modalPrice"></span></p>
+                </div>
 
-        <div class="product-card">
-            <div class="badge">Hot</div>
-            <div class="product-tumb">
-                <img src="/img/racao2.png" alt="">
-            </div>
-            <div class="product-details">
-                <span class="product-catagory">RAÇÃO</span>
-                <h4><a href="">RAÇÃO| CÃO FILHOTE</a></h4>
-                <p>Ração Seca Pedigree Junior para Cães Filhotes de Raças Médias e Grandes 15kg</p>
-                <div class="product-bottom-details">
-                    <div class="product-price"><small>R$180.00</small>R$158.00</div>
-                    <div class="product-links">
-                        <a href=""><i class="fa fa-heart"></i></a>
-                        <a href=""><i class="fa fa-shopping-cart"></i></a>
-                    </div>
+                <div class="content-label">
+                <label>Quantidade:</label>
+                <input type="number" id="quantity" min="1" value="1" style="width: 60px;"></div>
+    
+                <div class="modal-footer">
+                    <button onclick="closeModal()"><p class="text2">Finalizar Compra</p></button>
+                    <button onclick="closeModal()"><p class="text2">Cancelar</p></button>
                 </div>
             </div>
         </div>
+    
+        <script>
+            // Função para abrir o modal e preencher os dados
+            function openCartModal(imageSrc, description, price) {
+                document.getElementById("modalImage").src = imageSrc;
+                document.getElementById("modalDescription").textContent = description;
+                document.getElementById("modalPrice").textContent = price;
+                document.getElementById("cartModal").style.display = "flex";
+            }
+    
+            // Função para fechar o modal
+            function closeModal() {
+                document.getElementById("cartModal").style.display = "none";
+            }
+        </script>
 
-        <div class="product-card">
-            <div class="badge">Hot</div>
-            <div class="product-tumb">
-                <img src="/img/racao1.png" alt="">
-            </div>
-            <div class="product-details">
-                <span class="product-catagory">RAÇÃO</span>
-                <h4><a href="">RAÇÃO| CÃO ADULTO</a></h4>
-                <p>Ração Golden Special para Cães Adultos Sabor Frango & Carne</p>
-                <div class="product-bottom-details">
-                    <div class="product-price"><small>R$215,00</small>R$195.35</div>
-                    <div class="product-links">
-                        <a href=""><i class="fa fa-heart"></i></a>
-                        <a href=""><i class="fa fa-shopping-cart"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="product-card">
-            <div class="product-tumb">
-                <img src="/img/racao4.png" alt="">
-            </div>
-            <div class="product-details">
-                <span class="product-catagory">RAÇÃO</span>
-                <h4><a href="">RAÇÃO| GATO ADULTO</a></h4>
-                <p>Ração Golden para Gatos Adultos Sabor Salmão 1kg</p>
-                <div class="product-bottom-details">
-                    <div class="product-price">R$32.69</div>
-                    <div class="product-links">
-                        <a href=""><i class="fa fa-heart"></i></a>
-                        <a href=""><i class="fa fa-shopping-cart"></i></a>
-                    </div>
-                </div>
+        
+<div class="product-card">
+    <div class="badge">Hot</div>
+    <div class="product-tumb">
+        <img src="/img/racao2.png" alt="">
+    </div>
+    
+    <div class="product-details">
+        <span class="product-catagory">RAÇÃO</span>
+        <h4><a href="#">RAÇÃO | GÃO FILHOTE</a></h4>
+        <p>Ração Seca Pedigree Junior para Cães Filhotes de Raças Médias e Grandes 15kg</p>
+        <div class="product-bottom-details">
+            <div class="product-price"><small>R$180.00</small>R$158.00</div>
+            <div class="product-links">
+                <a href="#" onclick="openCartModal('/img/racao2.png', 'Ração Seca Pedigree Junior para Cães Filhotes de Raças Médias e Grandes 15kg', 158.00)">
+                    <i class="fa fa-shopping-cart"></i>
+                </a>
             </div>
         </div>
     </div>
+</div>
 
+<!-- Modal -->
+<div id="cartModal" class="modal">
+    <div class="modal-content">
+        <h2 class="text">ADICIONAR AO CARRINHO</h2>
+        <img id="modalImage" src="" alt="Product Image">
+        
+        <div class="container-descricao">
+        <p id="modalDescription"></p>
+        <p>Preço: R$<span id="modalPrice"></span></p>
+        </div>
 
-    <div class="container1">
-        <div class="product-card">
-            <div class="badge">Hot</div>
-            <div class="product-tumb">
-                <img src="/img/casa4.png" alt="">
+        <div class="content-label">
+        <label>Quantidade:</label>
+        <input type="number" id="quantity" min="1" value="1" style="width: 60px;"></div>
+
+        <div class="modal-footer">
+            <button onclick="closeModal()"><p class="text2">Finalizar Compra</p></button>
+            <button onclick="closeModal()"><p class="text2">Cancelar</p></button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Função para abrir o modal e preencher os dados
+    function openCartModal(imageSrc, description, price) {
+        document.getElementById("modalImage").src = imageSrc;
+        document.getElementById("modalDescription").textContent = description;
+        document.getElementById("modalPrice").textContent = price;
+        document.getElementById("cartModal").style.display = "flex";
+    }
+
+    // Função para fechar o modal
+    function closeModal() {
+        document.getElementById("cartModal").style.display = "none";
+    }
+</script>
+
+<div class="product-card">
+    <div class="badge">Hot</div>
+    <div class="product-tumb">
+        <img src="/img/racao1.png" alt="">
+    </div>
+    
+    <div class="product-details">
+        <span class="product-catagory">RAÇÃO</span>
+        <h4><a href="#">RAÇÃO| CÃO ADULTO</a></h4>
+        <p>Ração Golden Special para Cães Adultos Sabor Frango & Carne</p>
+        <div class="product-bottom-details">
+            <div class="product-price"><small>R$215,00</small>R$195.35</div>
+            <div class="product-links">
+                <a href="#" onclick="openCartModal('/img/racao1.png', 'Ração Golden Special para Cães Adultos Sabor Frango & Carne', 195.35)">
+                    <i class="fa fa-shopping-cart"></i>
+                </a>
             </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="cartModal" class="modal">
+    <div class="modal-content">
+        <h2 class="text">ADICIONAR AO CARRINHO</h2>
+        <img id="modalImage " src="" alt="Product Image">
+        
+        <div class="container-descricao">
+        <p id="modalDescription"></p>
+        <p>Preço: R$<span id="modalPrice"></span></p>
+        </div>
+
+        <div class="content-label">
+        <label>Quantidade:</label>
+        <input type="number" id="quantity" min="1" value="1" style="width: 60px;"></div>
+
+        <div class="modal-footer">
+            <button onclick="closeModal()"><p class="text2">Finalizar Compra</p></button>
+            <button onclick="closeModal()"><p class="text2">Cancelar</p></button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Função para abrir o modal e preencher os dados
+    function openCartModal(imageSrc, description, price) {
+        document.getElementById("modalImage").src = imageSrc;
+        document.getElementById("modalDescription").textContent = description;
+        document.getElementById("modalPrice").textContent = price;
+        document.getElementById("cartModal").style.display = "flex";
+    }
+
+    // Função para fechar o modal
+    function closeModal() {
+        document.getElementById("cartModal").style.display = "none";
+    }
+</script>
+
+<div class="product-card">
+    <div class="product-tumb">
+        <img src="/img/racao4.png" alt="">
+    </div>
+    
+    <div class="product-details">
+        <span class="product-catagory">RAÇÃO</span>
+        <h4><a href="#">RAÇÃO| GATO ADULTO</a></h4>
+        <p>Ração Golden para Gatos Adultos Sabor Salmão 1kg</p>
+        <div class="product-bottom-details">
+            <div class="product-price">R$32.69</div>
+            <div class="product-links">
+                <a href="#" onclick="openCartModal('/img/racao4.png', 'Ração Golden para Gatos Adultos Sabor Salmão 1kg', 32.69)">
+                    <i class="fa fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="cartModal" class="modal">
+    <div class="modal-content">
+        <h2 class="text">ADICIONAR AO CARRINHO</h2>
+        <img id="modalImage " src="" alt="Product Image">
+        
+        <div class="container-descricao">
+        <p id="modalDescription"></p>
+        <p>Preço: R$<span id="modalPrice"></span></p>
+        </div>
+
+        <div class="content-label">
+        <label>Quantidade:</label>
+        <input type="number" id="quantity" min="1" value="1" style="width: 60px;"></div>
+
+        <div class="modal-footer">
+            <button onclick="closeModal()"><p class="text2">Finalizar Compra</p></button>
+            <button onclick="closeModal()"><p class="text2">Cancelar</p></button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Função para abrir o modal e preencher os dados
+    function openCartModal(imageSrc, description, price) {
+        document.getElementById("modalImage").src = imageSrc;
+        document.getElementById("modalDescription").textContent = description;
+        document.getElementById("modalPrice").textContent = price;
+        document.getElementById("cartModal").style.display = "flex";
+    }
+
+    // Função para fechar o modal
+    function closeModal() {
+        document.getElementById("cartModal").style.display = "none";
+    }
+</script>
+
+</div> 
+
+        <div class="container1">
+            <div class="product-card">
+                <div class="badge">Hot</div>
+                <div class="product-tumb">
+                    <img src="/img/casa4.png" alt="">
+                </div>
+            
             <div class="product-details">
                 <span class="product-catagory">CASINHAS</span>
-                <h4><a href="">Casinha De Gato 2 Andares</a></h4>
-                <p>Gatos adoram se esconder e esta casa cama é perfeita para eles. Casinha e arranhador em sisal.</p>
+                <h4><a href="#">CASINHA| GATO PORTE GRANDE </a></h4>
+                <p>Casinha De 2 Andares, onde os gatos adoram se esconder e esta casa cama é perfeita para eles. Casinha e arranhador em sisal.</p>
                 <div class="product-bottom-details">
                     <div class="product-price"><small>R$298,40</small>R$243,00</div>
                     <div class="product-links">
-                        <a href=""><i class="fa fa-heart"></i></a>
-                        <a href=""><i class="fa fa-shopping-cart"></i></a>
+                        <a href="#" onclick="openCartModal('/img/casa4.png', 'Gatos adoram se esconder e esta casa cama é perfeita para eles. Casinha e arranhador em sisal.', 243.00)">
+                            <i class="fa fa-shopping-cart"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
+        
+        <!-- Modal -->
+        <div id="cartModal" class="modal">
+            <div class="modal-content">
+                <h2 class="text">ADICIONAR AO CARRINHO</h2>
+                <img id="modalImage " src="" alt="Product Image">
+                
+                <div class="container-descricao">
+                <p id="modalDescription"></p>
+                <p>Preço: R$<span id="modalPrice"></span></p>
+                </div>
+        
+                <div class="content-label">
+                <label>Quantidade:</label>
+                <input type="number" id="quantity" min="1" value="1" style="width: 60px;"></div>
+        
+                <div class="modal-footer">
+                    <button onclick="closeModal()"><p class="text2">Finalizar Compra</p></button>
+                    <button onclick="closeModal()"><p class="text2">Cancelar</p></button>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            // Função para abrir o modal e preencher os dados
+            function openCartModal(imageSrc, description, price) {
+                document.getElementById("modalImage").src = imageSrc;
+                document.getElementById("modalDescription").textContent = description;
+                document.getElementById("modalPrice").textContent = price;
+                document.getElementById("cartModal").style.display = "flex";
+            }
+        
+            // Função para fechar o modal
+            function closeModal() {
+                document.getElementById("cartModal").style.display = "none";
+            }
+        </script>
 
         <div class="product-card">
             <div class="badge">Hot</div>
             <div class="product-tumb">
                 <img src="/img/casa1.png" alt="">
             </div>
-            <div class="product-details">
-                <span class="product-catagory">CASINHA</span>
-                <h4><a href="">CASINHA| CÃO PORTE MÉDIO</a></h4>
-                <p>As casinhas de madeira são mais confortáveis e acolhedoras, mantendo temperatura agradável.
-                </p>
-                <div class="product-bottom-details">
-                    <div class="product-price"><small>R$350.00</small>R$315.56</div>
-                    <div class="product-links">
-                        <a href=""><i class="fa fa-heart"></i></a>
-                        <a href=""><i class="fa fa-shopping-cart"></i></a>
-                    </div>
+        
+        <div class="product-details">
+            <span class="product-catagory">CASINHAS</span>
+            <h4><a href="#">CASINHA| CÃO PORTE MÉDIO</a></h4>
+            <p>As casinhas de madeira são mais confortáveis e acolhedoras, mantendo temperatura agradável.</p>
+            <div class="product-bottom-details">
+                <div class="product-price"><small>R$350.00</small>R$315,26</div>
+                <div class="product-links">
+                    <a href="#" onclick="openCartModal('/img/casa1.png', 'As casinhas de madeira são mais confortáveis e acolhedoras, mantendo temperatura agradável.', 315.26)">
+                        <i class="fa fa-shopping-cart"></i>
+                    </a>
                 </div>
             </div>
         </div>
-
+    </div>
+    
+    <!-- Modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <h2 class="text">ADICIONAR AO CARRINHO</h2>
+            <img id="modalImage " src="" alt="Product Image">
+            
+            <div class="container-descricao">
+            <p id="modalDescription"></p>
+            <p>Preço: R$<span id="modalPrice"></span></p>
+            </div>
+    
+            <div class="content-label">
+            <label>Quantidade:</label>
+            <input type="number" id="quantity" min="1" value="1" style="width: 60px;"></div>
+    
+            <div class="modal-footer">
+                <button onclick="closeModal()"><p class="text2">Finalizar Compra</p></button>
+                <button onclick="closeModal()"><p class="text2">Cancelar</p></button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Função para abrir o modal e preencher os dados
+        function openCartModal(imageSrc, description, price) {
+            document.getElementById("modalImage").src = imageSrc;
+            document.getElementById("modalDescription").textContent = description;
+            document.getElementById("modalPrice").textContent = price;
+            document.getElementById("cartModal").style.display = "flex";
+        }
+    
+        // Função para fechar o modal
+        function closeModal() {
+            document.getElementById("cartModal").style.display = "none";
+        }
+    </script>
+    
         <div class="product-card">
             <div class="product-tumb">
                 <img src="/img/caminha.png" alt="">
             </div>
+            
             <div class="product-details">
                 <span class="product-catagory">CAMINHA</span>
-                <h4><a href="">CAMINHA| CÃO PORTE MÉDIO E GRANDE </a></h4>
+                <h4><a href="#">CAMINHA| CÃO PORTE MÉDIO E GRANDE</a></h4>
                 <p>Caminha de puro conforto, o fundo impermeável garante que seu animal fique protegido do frio do solo.</p>
                 <div class="product-bottom-details">
                     <div class="product-price">R$60.99</div>
                     <div class="product-links">
-                        <a href=""><i class="fa fa-heart"></i></a>
-                        <a href=""><i class="fa fa-shopping-cart"></i></a>
+                        <a href="#" onclick="openCartModal('/img/caminha.png', 'Caminha de puro conforto, o fundo impermeável garante que seu animal fique protegido do frio do solo.', 60.99)">
+                            <i class="fa fa-shopping-cart"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
+        
+        <!-- Modal -->
+        <div id="cartModal" class="modal">
+            <div class="modal-content">
+                <h2 class="text">ADICIONAR AO CARRINHO</h2>
+                <img id="modalImage " src="" alt="Product Image">
+                
+                <div class="container-descricao">
+                <p id="modalDescription"></p>
+                <p>Preço: R$<span id="modalPrice"></span></p>
+                </div>
+        
+                <div class="content-label">
+                <label>Quantidade:</label>
+                <input type="number" id="quantity" min="1" value="1" style="width: 60px;"></div>
+        
+                <div class="modal-footer">
+                    <button onclick="closeModal()"><p class="text2">Finalizar Compra</p></button>
+                    <button onclick="closeModal()"><p class="text2">Cancelar</p></button>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            // Função para abrir o modal e preencher os dados
+            function openCartModal(imageSrc, description, price) {
+                document.getElementById("modalImage").src = imageSrc;
+                document.getElementById("modalDescription").textContent = description;
+                document.getElementById("modalPrice").textContent = price;
+                document.getElementById("cartModal").style.display = "flex";
+            }
+        
+            // Função para fechar o modal
+            function closeModal() {
+                document.getElementById("cartModal").style.display = "none";
+            }
+        </script>
 
         <div class="product-card">
             <div class="product-tumb">
-                <img src="//img/cama.png" alt="">
+                <img src="/img/cama.png" alt="">
             </div>
+            
             <div class="product-details">
-                <span class="product-catagory">casinha</span>
-                <h4><a href="">Casinha| gato porte médio</a></h4>
+                <span class="product-catagory">CASINHA</span>
+                <h4><a href="#">Casinha| gato porte médio</a></h4>
                 <p>Arranhador de gato, multifuncional com casa e cama. Super confortopara seu gato.</p>
                 <div class="product-bottom-details">
                     <div class="product-price">R$237.79</div>
                     <div class="product-links">
-                        <a href=""><i class="fa fa-heart"></i></a>
-                        <a href=""><i class="fa fa-shopping-cart"></i></a>
+                        <a href="#" onclick="openCartModal('/img/cama.png', 'Arranhador de gato, multifuncional com casa e cama. Super confortopara seu gato.', 237.79)">
+                            <i class="fa fa-shopping-cart"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
+        
+        <!-- Modal -->
+        <div id="cartModal" class="modal">
+            <div class="modal-content">
+                <h2 class="text">ADICIONAR AO CARRINHO</h2>
+                <img id="modalImage " src="" alt="Product Image">
+                
+                <div class="container-descricao">
+                <p id="modalDescription"></p>
+                <p>Preço: R$<span id="modalPrice"></span></p>
+                </div>
+        
+                <div class="content-label">
+                <label>Quantidade:</label>
+                <input type="number" id="quantity" min="1" value="1" style="width: 60px;"></div>
+        
+                <div class="modal-footer">
+                    <button onclick="closeModal()"><p class="text2">Finalizar Compra</p></button>
+                    <button onclick="closeModal()"><p class="text2">Cancelar</p></button>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            // Função para abrir o modal e preencher os dados
+            function openCartModal(imageSrc, description, price) {
+                document.getElementById("modalImage").src = imageSrc;
+                document.getElementById("modalDescription").textContent = description;
+                document.getElementById("modalPrice").textContent = price;
+                document.getElementById("cartModal").style.display = "flex";
+            }
+        
+            // Função para fechar o modal
+            function closeModal() {
+                document.getElementById("cartModal").style.display = "none";
+            }
+        </script>
+
 
     </div>
 
-    <div class="container1">
+        <div class="container1">
         <div class="product-card">
             <div class="product-tumb">
                 <img src="/img/bolinha.png" alt="">
             </div>
+            
             <div class="product-details">
-                <span class="product-catagory">Brinquedo</span>
-                <h4><a href="">Brinquedo de Corda para Cachorro</a></h4>
+                <span class="product-catagory">BRINQUEDO</span>
+                <h4><a href="#">Brinquedo de Corda para Cachorro</a></h4>
                 <p>Os brinquedos de cordas são uns dos brinquedos mais divertidos para os cães, possui duas bolas de tênis que eles amam.</p>
                 <div class="product-bottom-details">
                     <div class="product-price">R$15,00</div>
                     <div class="product-links">
-                        <a href=""><i class="fa fa-heart"></i></a>
-                        <a href=""><i class="fa fa-shopping-cart"></i></a>
+                        <a href="#" onclick="openCartModal('/img/bolinha.png', 'Os brinquedos de cordas são uns dos brinquedos mais divertidos para os cães, possui duas bolas de tênis que eles amam.', 15.00)">
+                            <i class="fa fa-shopping-cart"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
+        
+        <!-- Modal -->
+        <div id="cartModal" class="modal">
+            <div class="modal-content">
+                <h2 class="text">ADICIONAR AO CARRINHO</h2>
+                <img id="modalImage " src="" alt="Product Image">
+                
+                <div class="container-descricao">
+                <p id="modalDescription"></p>
+                <p>Preço: R$<span id="modalPrice"></span></p>
+                </div>
+        
+                <div class="content-label">
+                <label>Quantidade:</label>
+                <input type="number" id="quantity" min="1" value="1" style="width: 60px;"></div>
+        
+                <div class="modal-footer">
+                    <button onclick="closeModal()"><p class="text2">Finalizar Compra</p></button>
+                    <button onclick="closeModal()"><p class="text2">Cancelar</p></button>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            // Função para abrir o modal e preencher os dados
+            function openCartModal(imageSrc, description, price) {
+                document.getElementById("modalImage").src = imageSrc;
+                document.getElementById("modalDescription").textContent = description;
+                document.getElementById("modalPrice").textContent = price;
+                document.getElementById("cartModal").style.display = "flex";
+            }
+        
+            // Função para fechar o modal
+            function closeModal() {
+                document.getElementById("cartModal").style.display = "none";
+            }
+        </script>
 
-        <div class="product-card">
+<div class="product-card">
             <div class="product-tumb">
                 <img src="/img/bolinhas.png" alt="">
             </div>
+            
             <div class="product-details">
-                <span class="product-catagory">Brinquedo</span>
-                <h4><a href="">bolinhas para cachorro</a></h4>
+                <span class="product-catagory">BRINQUEDO</span>
+                <h4><a href="#">bolinhas para cachorro</a></h4>
                 <p>Kit 3 bolinhas, com um material resistente que seu pet irá amar.</p>
                 <div class="product-bottom-details">
-                    <div class="product-price">R$20,00</div>
+                    <div class="product-price">R$20,10</div>
                     <div class="product-links">
-                        <a href=""><i class="fa fa-heart"></i></a>
-                        <a href=""><i class="fa fa-shopping-cart"></i></a>
+                        <a href="#" onclick="openCartModal('/img/bolinhas.png', 'Kit 3 bolinhas, com um material resistente que seu pet irá amar.', 20.10)">
+                            <i class="fa fa-shopping-cart"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
+        
+        <!-- Modal -->
+        <div id="cartModal" class="modal">
+            <div class="modal-content">
+                <h2 class="text">ADICIONAR AO CARRINHO</h2>
+                <img id="modalImage " src="" alt="Product Image">
+                
+                <div class="container-descricao">
+                <p id="modalDescription"></p>
+                <p>Preço: R$<span id="modalPrice"></span></p>
+                </div>
+        
+                <div class="content-label">
+                <label>Quantidade:</label>
+                <input type="number" id="quantity" min="1" value="1" style="width: 60px;"></div>
+        
+                <div class="modal-footer">
+                    <button onclick="closeModal()"><p class="text2">Finalizar Compra</p></button>
+                    <button onclick="closeModal()"><p class="text2">Cancelar</p></button>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            // Função para abrir o modal e preencher os dados
+            function openCartModal(imageSrc, description, price) {
+                document.getElementById("modalImage").src = imageSrc;
+                document.getElementById("modalDescription").textContent = description;
+                document.getElementById("modalPrice").textContent = price;
+                document.getElementById("cartModal").style.display = "flex";
+            }
+        
+            // Função para fechar o modal
+            function closeModal() {
+                document.getElementById("cartModal").style.display = "none";
+            }
+        </script>
 
-        <div class="product-card">
+            <div class="product-card">
             <div class="product-tumb">
                 <img src="/img/comida.png" alt="">
             </div>
+            
             <div class="product-details">
-                <span class="product-catagory">brinquedo</span>
-                <h4><a href="">Bola Porta Petisco</a></h4>
+                <span class="product-catagory">BRINQUEDO</span>
+                <h4><a href="#">Bola Porta Petisco</a></h4>
                 <p>Apresentamos o Bola Pra Cachorro Porta Petisco Brinquedo Pet , um produto que promete trazer muita diversão e entretenimento para o seu pet.</p>
                 <div class="product-bottom-details">
-                    <div class="product-price">R$29.99</div>
+                    <div class="product-price">R$29,99</div>
                     <div class="product-links">
-                        <a href=""><i class="fa fa-heart"></i></a>
-                        <a href=""><i class="fa fa-shopping-cart"></i></a>
+                        <a href="#" onclick="openCartModal('/img/comida.png', 'Apresentamos o Bola Pra Cachorro Porta Petisco Brinquedo Pet , um produto que promete trazer muita diversão e entretenimento para o seu pet.', 29.99)">
+                            <i class="fa fa-shopping-cart"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
+        
+        <!-- Modal -->
+        <div id="cartModal" class="modal">
+            <div class="modal-content">
+                <h2 class="text">ADICIONAR AO CARRINHO</h2>
+                <img id="modalImage " src="" alt="Product Image">
+                
+                <div class="container-descricao">
+                <p id="modalDescription"></p>
+                <p>Preço: R$<span id="modalPrice"></span></p>
+                </div>
+        
+                <div class="content-label">
+                <label>Quantidade:</label>
+                <input type="number" id="quantity" min="1" value="1" style="width: 60px;"></div>
+        
+                <div class="modal-footer">
+                    <button onclick="closeModal()"><p class="text2">Finalizar Compra</p></button>
+                    <button onclick="closeModal()"><p class="text2">Cancelar</p></button>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            // Função para abrir o modal e preencher os dados
+            function openCartModal(imageSrc, description, price) {
+                document.getElementById("modalImage").src = imageSrc;
+                document.getElementById("modalDescription").textContent = description;
+                document.getElementById("modalPrice").textContent = price;
+                document.getElementById("cartModal").style.display = "flex";
+            }
+        
+            // Função para fechar o modal
+            function closeModal() {
+                document.getElementById("cartModal").style.display = "none";
+            }
+        </script> 
 
-        <div class="product-card">
+
+<div class="product-card">
             <div class="product-tumb">
                 <img src="/img/brinquedo.png" alt="">
             </div>
+            
             <div class="product-details">
-                <span class="product-catagory">Brinquedo</span>
-                <h4><a href="">Gato| Ratinho Sisal</a></h4>
-                <p>Os ratinhos são feitos com material de alta qualidade e envoltos com sisal, o que torna o brinquedo extremamente intrigante para o seu Pet. </p>
+                <span class="product-catagory">BRINQUEDO</span>
+                <h4><a href="#">Gato| Ratinho Sisal</a></h4>
+                <p>Os ratinhos são feitos com material de alta qualidade e envoltos com sisal, o que torna o brinquedo extremamente intrigante para o seu Pet.</p>
                 <div class="product-bottom-details">
                     <div class="product-price">R$18.99</div>
                     <div class="product-links">
-                        <a href=""><i class="fa fa-heart"></i></a>
-                        <a href=""><i class="fa fa-shopping-cart"></i></a>
+                        <a href="#" onclick="openCartModal('/img/brinquedo.png', 'Os ratinhos são feitos com material de alta qualidade e envoltos com sisal, o que torna o brinquedo extremamente intrigante para o seu Pet.', 18.99)">
+                            <i class="fa fa-shopping-cart"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-
+        
+        <!-- Modal -->
+        <div id="cartModal" class="modal">
+            <div class="modal-content">
+                <h2 class="text">ADICIONAR AO CARRINHO</h2>
+                <img id="modalImage " src="" alt="Product Image">
+                
+                <div class="container-descricao">
+                <p id="modalDescription"></p>
+                <p>Preço: R$<span id="modalPrice"></span></p>
+                </div>
+        
+                <div class="content-label">
+                <label>Quantidade:</label>
+                <input type="number" id="quantity" min="1" value="1" style="width: 60px;"></div>
+        
+                <div class="modal-footer">
+                    <button onclick="closeModal()"><p class="text2">Finalizar Compra</p></button>
+                    <button onclick="closeModal()"><p class="text2">Cancelar</p></button>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            // Função para abrir o modal e preencher os dados
+            function openCartModal(imageSrc, description, price) {
+                document.getElementById("modalImage").src = imageSrc;
+                document.getElementById("modalDescription").textContent = description;
+                document.getElementById("modalPrice").textContent = price;
+                document.getElementById("cartModal").style.display = "flex";
+            }
+        
+            // Função para fechar o modal
+            function closeModal() {
+                document.getElementById("cartModal").style.display = "none";
+            }
+        </script> 
     </div>
 
-    <div class="container1">
+<div class="container1">
         <div class="product-card">
             <div class="product-tumb">
                 <img src="/img/roedor.png" alt="">
             </div>
+            
             <div class="product-details">
-                <span class="product-catagory">Brinquedos</span>
-                <h4><a href="">POSTE DE SISAL</a></h4>
-                <p>anhador modelo poste em pelúcia com duas bolinhas de brinquedo. Madeira ecologicamente correta e tratada para o pet.</p>
+                <span class="product-catagory">BRINQUEDO</span>
+                <h4><a href="#">POSTE DE SISAL</a></h4>
+                <p>Arranhador modelo poste em pelúcia com duas bolinhas de brinquedo. Madeira ecologicamente correta e tratada para o pet.</p>
                 <div class="product-bottom-details">
-                    <div class="product-price">R$43.99</div>
+                    <div class="product-price">R$43,99</div>
                     <div class="product-links">
-                        <a href=""><i class="fa fa-heart"></i></a>
-                        <a href=""><i class="fa fa-shopping-cart"></i></a>
+                        <a href="#" onclick="openCartModal('/img/roedor.png', 'Arranhador modelo poste em pelúcia com duas bolinhas de brinquedo. Madeira ecologicamente correta e tratada para o pet.', 43.99)">
+                            <i class="fa fa-shopping-cart"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
+        
+        <!-- Modal -->
+        <div id="cartModal" class="modal">
+            <div class="modal-content">
+                <h2 class="text">ADICIONAR AO CARRINHO</h2>
+                <img id="modalImage " src="" alt="Product Image">
+                
+                <div class="container-descricao">
+                <p id="modalDescription"></p>
+                <p>Preço: R$<span id="modalPrice"></span></p>
+                </div>
+        
+                <div class="content-label">
+                <label>Quantidade:</label>
+                <input type="number" id="quantity" min="1" value="1" style="width: 60px;"></div>
+        
+                <div class="modal-footer">
+                    <button onclick="closeModal()"><p class="text2">Finalizar Compra</p></button>
+                    <button onclick="closeModal()"><p class="text2">Cancelar</p></button>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            // Função para abrir o modal e preencher os dados
+            function openCartModal(imageSrc, description, price) {
+                document.getElementById("modalImage").src = imageSrc;
+                document.getElementById("modalDescription").textContent = description;
+                document.getElementById("modalPrice").textContent = price;
+                document.getElementById("cartModal").style.display = "flex";
+            }
+        
+            // Função para fechar o modal
+            function closeModal() {
+                document.getElementById("cartModal").style.display = "none";
+            }
+        </script> 
+
 
         <div class="product-card">
             <div class="product-tumb">
                 <img src="/img/pote2.png" alt="">
             </div>
+            
             <div class="product-details">
                 <span class="product-catagory">Acessório de alimentação</span>
-                <h4><a href="">Pote para ração</a></h4>
-                <p>O Pote para Ração faz parte de uma coleção que proporciona mais funcionalidade à sua casa.</p>
+                <h4><a href="#">Pote para ração</a></h4>
+                <p> O pote para Ração faz parte de uma coleção que proporciona mais funcionalidade à sua casa.</p>
                 <div class="product-bottom-details">
-                    <div class="product-price">R$30.00</div>
+                    <div class="product-price">R$30,00</div>
                     <div class="product-links">
-                        <a href=""><i class="fa fa-heart"></i></a>
-                        <a href=""><i class="fa fa-shopping-cart"></i></a>
+                        <a href="#" onclick="openCartModal('/img/pote2.png', ' Pote para Ração faz parte de uma coleção que proporciona mais funcionalidade à sua casa.', 30.00)">
+                            <i class="fa fa-shopping-cart"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
+        
+        <!-- Modal -->
+        <div id="cartModal" class="modal">
+            <div class="modal-content">
+                <h2 class="text">ADICIONAR AO CARRINHO</h2>
+                <img id="modalImage " src="" alt="Product Image">
+                
+                <div class="container-descricao">
+                <p id="modalDescription"></p>
+                <p>Preço: R$<span id="modalPrice"></span></p>
+                </div>
+        
+                <div class="content-label">
+                <label>Quantidade:</label>
+                <input type="number" id="quantity" min="1" value="1" style="width: 60px;"></div>
+        
+                <div class="modal-footer">
+                    <button onclick="closeModal()"><p class="text2">Finalizar Compra</p></button>
+                    <button onclick="closeModal()"><p class="text2">Cancelar</p></button>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            // Função para abrir o modal e preencher os dados
+            function openCartModal(imageSrc, description, price) {
+                document.getElementById("modalImage").src = imageSrc;
+                document.getElementById("modalDescription").textContent = description;
+                document.getElementById("modalPrice").textContent = price;
+                document.getElementById("cartModal").style.display = "flex";
+            }
+        
+            // Função para fechar o modal
+            function closeModal() {
+                document.getElementById("cartModal").style.display = "none";
+            }
+        </script> 
 
         <div class="product-card">
             <div class="product-tumb">
                 <img src="/img/pote3.png" alt="">
             </div>
+            
             <div class="product-details">
                 <span class="product-catagory">Acessório de alimentação</span>
-                <h4><a href="">Tigela para gato</a></h4>
-                <p> Tigela Para Gato Elevada Com Garrafa De Água Automática</p>
+                <h4><a href="#">Tigela para gato</a></h4>
+                <p>Tigela Para Gato Elevada Com Garrafa De Água Automática</p>
                 <div class="product-bottom-details">
-                    <div class="product-price">R$86.62</div>
+                    <div class="product-price">R$86,62</div>
                     <div class="product-links">
-                        <a href=""><i class="fa fa-heart"></i></a>
-                        <a href=""><i class="fa fa-shopping-cart"></i></a>
+                        <a href="#" onclick="openCartModal('/img/pote3.png', 'Tigela Para Gato Elevada Com Garrafa De Água Automática', 86,62)">
+                            <i class="fa fa-shopping-cart"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
+        
+        <!-- Modal -->
+        <div id="cartModal" class="modal">
+            <div class="modal-content">
+                <h2 class="text">ADICIONAR AO CARRINHO</h2>
+                <img id="modalImage " src="" alt="Product Image">
+                
+                <div class="container-descricao">
+                <p id="modalDescription"></p>
+                <p>Preço: R$<span id="modalPrice"></span></p>
+                </div>
+        
+                <div class="content-label">
+                <label>Quantidade:</label>
+                <input type="number" id="quantity" min="1" value="1" style="width: 60px;"></div>
+        
+                <div class="modal-footer">
+                    <button onclick="closeModal()"><p class="text2">Finalizar Compra</p></button>
+                    <button onclick="closeModal()"><p class="text2">Cancelar</p></button>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            // Função para abrir o modal e preencher os dados
+            function openCartModal(imageSrc, description, price) {
+                document.getElementById("modalImage").src = imageSrc;
+                document.getElementById("modalDescription").textContent = description;
+                document.getElementById("modalPrice").textContent = price;
+                document.getElementById("cartModal").style.display = "flex";
+            }
+        
+            // Função para fechar o modal
+            function closeModal() {
+                document.getElementById("cartModal").style.display = "none";
+            }
+        </script> 
 
         <div class="product-card">
             <div class="product-tumb">
                 <img src="/img/pote.png" alt="">
             </div>
+            
             <div class="product-details">
                 <span class="product-catagory">Acessório de alimentação</span>
-                <h4><a href="">Tigela para cachorro</a></h4>
+                <h4><a href="#">Tigela para cachorro</a></h4>
                 <p>Comedouro Bebedouro Cães Cachorro Médio.</p>
                 <div class="product-bottom-details">
-                    <div class="product-price">R$50.90</div>
+                    <div class="product-price">R$50.91</div>
                     <div class="product-links">
-                        <a href=""><i class="fa fa-heart"></i></a>
-                        <a href=""><i class="fa fa-shopping-cart"></i></a>
+                        <a href="#" onclick="openCartModal('/img/pote.png', 'Comedouro Bebedouro Cães Cachorro Médio.', 50.91)">
+                            <i class="fa fa-shopping-cart"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
+        
+        <!-- Modal -->
+        <div id="cartModal" class="modal">
+            <div class="modal-content">
+                <h2 class="text">ADICIONAR AO CARRINHO</h2>
+                <img id="modalImage " src="" alt="Product Image">
+                
+                <div class="container-descricao">
+                <p id="modalDescription"></p>
+                <p>Preço: R$<span id="modalPrice"></span></p>
+                </div>
+        
+                <div class="content-label">
+                <label>Quantidade:</label>
+                <input type="number" id="quantity" min="1" value="1" style="width: 60px;"></div>
+        
+                <div class="modal-footer">
+                    <button onclick="closeModal()"><p class="text2">Finalizar Compra</p></button>
+                    <button onclick="closeModal()"><p class="text2">Cancelar</p></button>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            // Função para abrir o modal e preencher os dados
+            function openCartModal(imageSrc, description, price) {
+                document.getElementById("modalImage").src = imageSrc;
+                document.getElementById("modalDescription").textContent = description;
+                document.getElementById("modalPrice").textContent = price;
+                document.getElementById("cartModal").style.display = "flex";
+            }
+        
+            // Função para fechar o modal
+            function closeModal() {
+                document.getElementById("cartModal").style.display = "none";
+            }
+        </script> 
 
     </div>
+
 
     <footer>
         <div id="footer_content">
@@ -360,16 +987,16 @@
                     <h3 class="h3">Links</h3>
                 </li>
                 <li>
-                    <a href="#" class="footer-link">Início</a>
+                    <a href="index.html" class="footer-link">Início</a>
                 </li>
                 <li>
-                    <a href="#" class="footer-link">Adotar</a>
+                    <a href="adote.html" class="footer-link">Adotar</a>
                 </li>
                 <li>
-                    <a href="#" class="footer-link">Cadastrar</a>
+                    <a href="cadastro.html" class="footer-link">Cadastrar</a>
                 </li>
                 <li>
-                  <a href="#" class="footer-link">Shop</a>
+                  <a href="shop.html" class="footer-link">Shop</a>
               </li>
             </ul>
   
